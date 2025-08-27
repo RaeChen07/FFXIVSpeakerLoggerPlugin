@@ -1,4 +1,4 @@
-﻿using Dalamud.Configuration;
+using Dalamud.Configuration;
 using System;
 
 namespace SamplePlugin;
@@ -10,6 +10,8 @@ public class Configuration : IPluginConfiguration
 
     public bool IsConfigWindowMovable { get; set; } = true;
     public bool SomePropertyToBeSavedAndWithADefault { get; set; } = true;
+    public string Target { get; set; } = ""; // e.g., "Alice Bob" or "Alice Bob@Leviathan"
+    public string OutputCsvPath { get; set; } = "";
 
     // The below exist just to make saving less cumbersome
     public void Save()
